@@ -23,25 +23,9 @@ func Abbreviate(sentence string) string {
 		} else if sentenceArray[i - 1] == " " {
 		  newSentence = append(newSentence, strings.ToUpper(sentenceArray[i]))
 		} else if sentenceArray[i - 1] == "-" {
-		  newSentence = append(newSentence, strings.ToUpper(sentenceArray[i]))
+		  newSentence = append(newSentence, strings.TaoUpper(sentenceArray[i]))
 		}
 	}
 	return strings.Join(newSentence, "")
 }
-
-
-
-// def acronym(sentence)
-//     new_sentence = []
-//     sentence.split("").each_with_index do |a , index|
-//         if index == 0 
-//             new_sentence << a           
-//         elsif sentence[index - 1] == " "
-//             new_sentence << sentence[index].capitalize
-//         elsif sentence[index - 1] == "-"
-//             new_sentence << sentence[index].capitalize
-//         end    
-//     end
-//     new_sentence
-// end
 
